@@ -30,24 +30,24 @@ public class ProductManager {
     private String qty;
  
     
-    private Collection customerList;
+    private Collection productList;
 
     /**
-     * Get the value of customerList
+     * Get the value of productList
      *
-     * @return the value of customerList
+     * @return the value of productList
      */
-    public Collection getCustomerList() {
-        return customerList;
+    public Collection getProductList() {
+        return productList;
     }
 
     /**
-     * Set the value of customerList
+     * Set the value of productList
      *
-     * @param customerList new value of customerList
+     * @param productList new value of productList
      */
-    public void setCustomerList(Collection customerList) {
-        this.customerList = customerList;
+    public void setProductList(Collection productList) {
+        this.productList = productList;
     }
 
 
@@ -121,7 +121,7 @@ public class ProductManager {
         this.id = id;
     }
 
-    public String showCustomer() {
+    public String showProduct() {
 
         FacesContext context = FacesContext.getCurrentInstance();
         NewJerseyClient rest;
@@ -186,8 +186,8 @@ public class ProductManager {
             return null;
         }
         
-        customerList = new ArrayList();
-        customerList.add(this);
+        productList = new ArrayList();
+        productList.add(this);
         return "product";
     }
 

@@ -23,7 +23,7 @@
             <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
             <h1>Customer Detail</h1>
 
-            <h:dataTable value="#{productmanager.customerList}" var="item" border="0" cellpadding="2" cellspacing="0" rowClasses="jsfcrud_odd_row,jsfcrud_even_row" rules="all" style="border:solid 1px">
+            <h:dataTable value="#{productmanager.productList}" var="item" border="0" cellpadding="2" cellspacing="0" rowClasses="jsfcrud_odd_row,jsfcrud_even_row" rules="all" style="border:solid 1px">
                 <h:column>
                     <f:facet name="header">
                         <h:outputText value="Product Id"/>
@@ -31,13 +31,15 @@
                     <h:outputText value="#{item.id}"/>
 
                 </h:column>
-        <h:column>
-                 <f:facet name="header">
+                
+                <h:column>
+                    <f:facet name="header">
                         <h:outputText value="Name"/>
                     </f:facet>
                     <h:outputText value="#{item.name}"/>
                 </h:column>
-                 <h:column>
+                
+                <h:column>
                     <f:facet name="header">
                         <h:outputText value="Price"/>
                     </f:facet>
@@ -53,7 +55,7 @@
 
             </h:dataTable>
            
-                      <h:form id="return">
+            <h:form id="return">
                 <h:commandLink id="return"
                                value="Return"
                                action="return"/>

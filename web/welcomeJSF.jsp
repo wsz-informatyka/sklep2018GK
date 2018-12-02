@@ -32,13 +32,14 @@
                 <h:commandButton id="submit" 
                                  type="submit"
                                  value="Show product"
-                                 action="#{productmanager.showCustomer}"/>
+                                 action="#{productmanager.showProduct}"/>
 
             </h:form>
                     
-                    <br><br>
-                      <h3>Select Customer</h3>
-                       <h:form id="selectCustomer">
+            <br><br>
+            
+            <h3>Select Customer</h3>
+            <h:form id="selectCustomer">
                 <h:panelGrid columns="2" border="0">
                     Input customer id: <h:inputText id="id" 
                                  value="#{customermanager.id}"/>        
